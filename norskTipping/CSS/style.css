@@ -1,6 +1,7 @@
 body {
-    height: 100vh;
-    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-image: linear-gradient(-180deg, #ffdf00, #ffb400);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -11,12 +12,11 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    width: 100%;
+    height: 95%;
+    width: 95%;
 }
 
 #info{
-    margin-top: 3%;
     height: 30%;
     width: 100%;
 }
@@ -28,18 +28,20 @@ body {
 }
 
 #jokerLogo{
-    width: 8%;
+    width: 89px;
+    height: 36px;
 }
 
 #header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     color: #c60c30;
-    font-size: 3.5rem;
+    font-size: 2.75rem;
+    font-weight: 700;
     font-family: Ed Gothic,Helvetica Neue,Helvetica,Arial,sans-serif;
-}
-
-h1{
-    font-size: 3.75rem;
+    margin: 2%;
 }
 
 #intro {
@@ -47,7 +49,9 @@ h1{
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     font-size: 1.5rem;
+    margin: 2%;
 }
 
 #gameContainer{
@@ -55,8 +59,7 @@ h1{
     justify-content: center;
     align-items: center ;
     flex-direction: column;
-    width: 100%;
-    margin-bottom: 25%;
+    width: 80%;
 }
 
 #gameAndPrices{
@@ -88,27 +91,28 @@ h1{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin: 2rem;
     width: 5%;
 }
 
 .item button {
+    width: 2em;
+    height: 2em;
     align-items: center;
-    background-color: #fff;
     border-radius: 2rem;
-    color: #000;
     display: flex;
+    justify-content: center;
     flex-flow: column nowrap;
     font-family: Jubel,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-size: 2rem;
     /* font-weight: 400; */
     grid-column: 1;
     grid-row: 1;
-    height: 4rem;
-    justify-content: center;
     padding: 0.125rem 0 0 0.125rem;
     margin: 0.5rem;
-    width: 4rem;
+    background-color: #fff;
+    color: #000;
 }
 
 .up{
@@ -193,10 +197,15 @@ h1{
 
     #info{
         height: 20%;
+        margin-top: 0;
     }
 
-    #jokerLogo{
-        width: 20%;
+    #header{
+        font-size: 2rem;
+    }
+
+    #intro{
+        margin: 0;
     }
 
     h1{
@@ -206,7 +215,6 @@ h1{
     #gameContainer{
         height: 70%;
         width: 100%;
-        margin-bottom: 10%;
     }
 
     #gameAndPrices{
@@ -222,12 +230,6 @@ h1{
         height: 50%;
         width: 100%;
         margin-right: 0%;
-        margin-bottom: 5%;
-        margin-top: 1.5%;
-    }
-    
-    #gamePlay{
-        margin-right: 15%;
     }
 
     .item{
@@ -236,7 +238,6 @@ h1{
     }
     
     #prices{
-        margin-top: 10%;
         margin-bottom: 10%;
         width: 70%;
         height: 15%;
@@ -245,10 +246,11 @@ h1{
     .priceText{
         width: auto;
         padding: 0.5%;
-        font-size: 150%;    
+        font-size: 115%;    
     }
-    
+
     #replay{
         width: 30%;
+        margin-bottom: 10%;
     }
 }
