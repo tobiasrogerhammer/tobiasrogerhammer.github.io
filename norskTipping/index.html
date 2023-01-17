@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/joker.js" defer></script>
+    <title> Tobias Joker </title>
+</head>
+<body onload="jokerGame.startGame();jokerGame.playgame();">
+    <div id="content">
+        <div id="info">
+            <div id="logo">
+                <img alt="Joker" src="//www.norsk-tipping.no/staticimages/ntds/logos/joker/joker-full-color-red.svg" id="jokerLogo">
+            </div>
+            <div id="header">
+                <h1>Joker-kandidatens prøvespill</h1>
+            </div>
+
+            <div id="intro">
+                Trekk tallene og se om du vinner!
+            </div>
+        </div>
+        <div id="gameContainer">
+            <div id="gameAndPrices">
+                <div id="spill">
+                    <div id="gamePlay">
+                        <div class="item">
+                            <button id="up0" class= "up" type="button">^</button>
+                            <button id="btn0" type="button"></button>
+                            <button id="down0" class= "down" type="button">v</button>
+                        </div>
+                        <div class="item">
+                            <button id="up1" class= "up" type="button">^</button>
+                            <button id="btn1" type="button"></button>
+                            <button id="down1" class= "down" type="button">v</button>
+                        </div>
+                        <div class="item">
+                            <button id="up2" class= "up" type="button">^</button>
+                            <button id="btn2" type="button"></button>
+                            <button id="down2" class= "down" type="button">v</button>
+                        </div>
+                        <div class="item">
+                            <button id="up3" class= "up" type="button">^</button>
+                            <button id="btn3" type="button"></button>
+                            <button id="down3" class= "down" type="button">v</button>
+                        </div>
+                        <div class="item">
+                            <button id="up4" class= "up" type="button">^</button>
+                            <button id="btn4" type="button"></button>
+                            <button id="down4" class= "down" type="button">v</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="prices">
+                    <div class="priceText" id="priceFive">2 196 000 kr</div>
+                    <div class="priceText" id="priceFour">1 464 000 kr</div>
+                    <div class="priceText" id="priceThree">1 010 000 kr</div>
+                    <div class="priceText" id="priceTwo">722 000 kr</div>
+                    <div class="priceText" id="priceOne">535 000 kr</div>
+                    <div class="priceText" id="priceZero">412 000 kr</div>
+                </div>
+            </div>
+            <button class="start_game" id="replay" type="button">Spill på nytt</button>
+        </div>
+    </div>
+</body>
+</html>

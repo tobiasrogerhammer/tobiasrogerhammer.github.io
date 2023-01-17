@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="CSS/style.css" rel="stylesheet">
+        <title>Objekt orientert programmering</title>
+    </head>
+    <body>
+        <h1> Objektorientert programmering </h1>
+        <div id="ageCalculator">
+            <form id="calculatorInput">
+                <label for="fname">Fornavn:</label>
+                <input type="text" id="fname" name="fname"><br><br>
+                <label for="fodselsar">Fødselsår:</label>
+                <input type="number" id="fodselsar" name="fodselsar"><br><br>
+                <input type="submit" id="submit" value="Submit">
+            </form>
+            <div id="personAge"></div>
+            <div id="message"></div>
+            <div id="otherGames" class="answer" onclick="history.back()"> Andre oppgaver</div>
+        </div>
+    <script src="JS/oop.js"></script>
+    </body>
+</html>

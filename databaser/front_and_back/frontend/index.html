@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Frontend Example</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+    <body>   
+        <div id="Header">
+            <h1>Dette er en frontend-backend koblet tabell med HTML, JS-frontend, JS-backend og CSS </h1>
+            <div id="buttons">
+                <button id="consoleTest" onclick="getRequest()">Test database kobling i console log</button>
+                <button id="databaseTest" onclick="getTable()">Test tabell</button>
+            </div>
+        </div>
+            <table id="SQLTable">
+                <th>ElevID</th>
+                <th>Fornavn</th>
+                <th>Etternavn</th>
+                <th>Klassetrinn</th>
+                <th>Hobby</th>
+                <th>Programfag</th>
+                <th>Gender</th>
+                <th>Datamaskin</th>
+            </table>
+            <script src="JS/request_get.js"></script>
+            <div id="otherGames" class="answer" onclick="history.back()"> Andre oppgaver</div>
+    </body>
+</html>
