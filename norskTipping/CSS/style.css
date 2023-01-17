@@ -115,6 +115,17 @@ body {
     color: #000;
 }
 
+button::content {
+    background-color: #ffdf00;
+    color: #ffdf00;
+}
+
+button:left {
+    background-color: #ffdf00;
+    color: #ffdf00;
+}
+
+
 .up{
     background-color: #E4EBF5;
     display: flex;
@@ -143,10 +154,12 @@ body {
 
 .correct {
     border: 5px solid #00892c;
+    color: #000;
 }
 
 .incorrect {
     border: 5px solid #c60c30;
+    color: #000;
 }
 
 
@@ -236,7 +249,9 @@ body {
         margin: 7%;
         width: 5%;
     }
-    
+    #gameplay{
+        width: 70%;
+    }
     #prices{
         margin-bottom: 10%;
         width: 70%;
