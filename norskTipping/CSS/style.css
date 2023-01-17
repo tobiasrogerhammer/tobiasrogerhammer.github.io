@@ -115,17 +115,6 @@ body {
     color: #000;
 }
 
-button::content {
-    background-color: #ffdf00;
-    color: #ffdf00;
-}
-
-button:left {
-    background-color: #ffdf00;
-    color: #ffdf00;
-}
-
-
 .up{
     background-color: #E4EBF5;
     display: flex;
@@ -241,17 +230,24 @@ button:left {
 
     #spill{
         height: 50%;
-        width: 100%;
+        width: 70%;
         margin-right: 0%;
     }
 
     .item{
-        margin: 7%;
+        margin: 10%;
         width: 5%;
     }
+    .item button {
+        width: 50px;
+        height: 50px;
+        margin: 15%;
+    }
+
     #gameplay{
         width: 70%;
     }
+    
     #prices{
         margin-bottom: 10%;
         width: 70%;
