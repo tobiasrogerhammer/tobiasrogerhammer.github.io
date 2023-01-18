@@ -125,7 +125,13 @@ body {
     color: #ffdf00;
     cursor: auto;
 }
-
+#jokerHat{
+    height: 40%;
+    position: fixed;
+    top: 18%;
+    right: 25%;
+    z-index: -1;
+}
 .up{
     background-color: #E4EBF5;
     display: flex;
@@ -201,7 +207,11 @@ body {
     cursor: pointer;
     border: none;
 }
-
+@media (max-width: 1250px) {
+    #jokerHat{
+        display: none;
+    }
+}
 @media (max-width: 768px) {
     #content{
         display: flex;
