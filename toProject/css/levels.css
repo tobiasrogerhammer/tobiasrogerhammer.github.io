@@ -259,6 +259,7 @@ h1 {
 @media only screen and (max-width: 600px) {
     #mainMenu {
         font-size: 100%;
+        word-break: unset;
     }
     h1 {
         font-size: 150%;

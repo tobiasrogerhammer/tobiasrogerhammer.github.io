@@ -5,11 +5,20 @@ body{
     display: flex;
     flex-direction: column;
 }
+
+#backButton{
+    position: relative;
+    right: 45%;
+    height: 50px;
+    color: #717e9c;
+    cursor: pointer;
+}
+
 h1{
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #717e9c;
-    font-size: 300%;
+    font-size: 200%;
 }
 #oppgaver{
     display: flex;
