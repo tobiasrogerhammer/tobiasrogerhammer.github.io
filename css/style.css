@@ -87,12 +87,17 @@ body {
     cursor: pointer;
 }
 
-.oppgaver:hover {
+.project:hover {
     box-shadow: inset .3rem .3rem .6rem #c8d0e7, inset -.2rem -.2rem .5rem #FFFFFF;
 }
 
-.oppgaver:active {
+.project:active {
     box-shadow: inset .6rem .6rem .6rem #c8d0e7, inset -.5rem -.5rem .5rem #FFFFFF;
+}
+#jokerLogo{
+    width: 12%;
+    height: 100%;
+    margin-left: 3%;
 }
 
 @media (max-width: 768px) {
