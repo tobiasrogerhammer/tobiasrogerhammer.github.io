@@ -31,6 +31,12 @@ body {
     width: 89px;
     height: 36px;
 }
+#backButton{
+    position: relative;
+    top: 2%;
+    right: 45%;
+    cursor: pointer;
+}
 
 #header {
     display: flex;
@@ -114,6 +120,11 @@ body {
     background-color: #fff;
     color: #000;
 }
+.item button:disabled{
+    background-color: #ffdf00;
+    color: #ffdf00;
+    cursor: auto;
+}
 
 .up{
     background-color: #E4EBF5;
@@ -143,12 +154,14 @@ body {
 
 .correct {
     border: 5px solid #00892c;
-    color: #000;
+    color: #000 !important;
+    background-color: #fff !important;
 }
 
 .incorrect {
     border: 5px solid #c60c30;
-    color: #000;
+    color: #000 !important;
+    background-color: #fff !important; 
 }
 
 
@@ -200,6 +213,9 @@ body {
     #info{
         height: 20%;
         margin-top: 0;
+    }
+    #backButton{
+        right: 25%;
     }
 
     #header{
