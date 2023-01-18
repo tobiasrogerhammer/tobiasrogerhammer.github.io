@@ -84,9 +84,8 @@ body {
 #quiz:hover {
     box-shadow: inset .3rem .3rem .6rem #23710d, inset -.2rem -.2rem .5rem #3a9234;
 }
-
 #easyjs:hover {
-    box-shadow: inset .3rem .3rem .6rem #ffdf00 inset -.2rem -.2rem .5rem #ffbf00; 
+    color: #23710d;
 }
 
 .project:active {
