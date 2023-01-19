@@ -214,21 +214,6 @@ body {
     border: none;
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    20% {
-        opacity: 70%;
-    }
-
-    25% {
-        opacity: 100%;
-    }
-}
-
-
 @media (max-width: 1250px) {
     #jokerHat {
         display: none;
