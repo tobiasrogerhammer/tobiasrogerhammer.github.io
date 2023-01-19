@@ -7,6 +7,8 @@ class Joker {
         this.score = 0;
     }
     
+    
+
     startGame() {
         for (let i = 0; i < 5; i++) {
             let randomMiddle = Math.floor(Math.random() * 10);
@@ -31,7 +33,7 @@ class Joker {
     
     playgame() {
         const allPrice = document.getElementsByClassName("priceText");
-        
+
         for (let i = 0; i <= 5; i++) {
             allPrice[i].classList.remove("priceCurrent");
             if (this.score === 5) {
@@ -59,6 +61,7 @@ class Joker {
                     allPrice[i].classList.add("priceCurrent");
                 }
             }
+            
         }
         if (this.index >= 5) {
             if (this.score === 5) {
@@ -147,8 +150,8 @@ class Joker {
         
         
         
-        let jokerGame = new Joker('')
         
+        let jokerGame = new Joker('')
         document.getElementById("replay").onclick = (e) => {
             window.location.reload();
         }
