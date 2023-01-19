@@ -2,7 +2,7 @@ var coll = document.getElementsByClassName("collapsible");
 var i;
 
 for (i = 0; i < coll.length; i++) {
-  collthis.index.addEventListener("click", function() {
+  coll[i].addEventListener("click", function () {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
     if (content.style.display === "flex") {
@@ -13,15 +13,14 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-
-document.getElementById('arealCalculator').addEventListener('submit', function(e) {
+document.getElementById('arealCalculator').addEventListener('submit', function (e) {
   e.preventDefault();
   const lengde = document.getElementById('lengde').value;
   const bredde = document.getElementById('bredde').value;
 
   document.getElementById('calculatorOutput').innerHTML = lengde * bredde + "cm i annen";
 });
-document.getElementById('triangleCalculator').addEventListener('submit', function(e) {
+document.getElementById('triangleCalculator').addEventListener('submit', function (e) {
   e.preventDefault();
   const lengden = document.getElementById('lengden').value;
   const bredden = document.getElementById('bredden').value;
@@ -41,7 +40,6 @@ function checkNationality() {
   }
 }
 
-
 function startGame() {
   // Get the secret number from the input element
   let min = 1;
@@ -49,7 +47,7 @@ function startGame() {
   let secretNumber = parseInt(document.getElementById("secretInput").value);
 
   while (secretNumber < min || secretNumber > max || isNaN(secretNumber)) {
-      secretNumber = parseInt(prompt("Ugyldig svar. Vennligst velg et nummer mellom " + min + " og " + max + ":"));
+    secretNumber = parseInt(prompt("Ugyldig svar. Vennligst velg et nummer mellom " + min + " og " + max + ":"));
   }
 
   // Start guessing
@@ -60,14 +58,14 @@ function startGame() {
   guesses.push(guess);
 
   while (guess !== secretNumber) {
-      if (guess > secretNumber) {
-          max = guess - 1;
-      } else {
-          min = guess + 1;
-      }
-      guess = Math.floor((max + min) / 2);
-      guesses.push(guess);
-      attempts++;
+    if (guess > secretNumber) {
+      max = guess - 1;
+    } else {
+      min = guess + 1;
+    }
+    guess = Math.floor((max + min) / 2);
+    guesses.push(guess);
+    attempts++;
   }
 
   // Vise resultatet på siden
@@ -81,10 +79,10 @@ function startGame() {
 
 var test = 8;
 var testVerdi = 'testverdi';
-var produkt = 2*3;
-var broek = 2/3;
-var rektangel = 8*8;
-var trekant = 8*6/2
+var produkt = 2 * 3;
+var broek = 2 / 3;
+var rektangel = 8 * 8;
+var trekant = 8 * 6 / 2
 
 console.log(test)
 console.log(testVerdi)

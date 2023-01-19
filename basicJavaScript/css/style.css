@@ -1,4 +1,4 @@
-body{
+body {
     background-color: #E4EBF5;
     justify-content: center;
     align-items: center;
@@ -6,7 +6,7 @@ body{
     flex-direction: column;
 }
 
-#backButton{
+#backButton {
     position: relative;
     right: 45%;
     height: 50px;
@@ -14,19 +14,21 @@ body{
     cursor: pointer;
 }
 
-h1{
+h1 {
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #717e9c;
     font-size: 200%;
 }
-#oppgaver{
+
+#oppgaver {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 95%;
 }
+
 .collapsible {
     flex-direction: column;
     padding: 18px;
@@ -48,16 +50,16 @@ h1{
     color: #717e9c;
     cursor: pointer;
 
-  }
-  
-  .collapsible:hover {
+}
+
+.collapsible:hover {
     box-shadow: inset .3rem .3rem .6rem #c8d0e7, inset -.2rem -.2rem .5rem #FFFFFF;
 }
 
 .collapsible:active {
     box-shadow: inset .6rem .6rem .6rem #c8d0e7, inset -.5rem -.5rem .5rem #FFFFFF;
 }
-  
+
 .content {
     display: flex;
     flex-direction: column;
@@ -71,7 +73,8 @@ h1{
     border-radius: 10px;
     box-shadow: .3rem .3rem .6rem #c8d0e7, -.2rem -.2rem .5rem #FFFFFF;
 }
-.languageJavascript{
+
+.languageJavascript {
     height: 5%;
     width: 80%;
     border-radius: 5px;
@@ -84,35 +87,40 @@ h1{
     word-break: break-all;
     overflow: scroll;
 }
-pre{
+
+pre {
     height: 25%;
     display: flex;
     align-items: center;
     text-align: center;
 }
-#calculators{
+
+#calculators {
     display: flex;
     flex-direction: row;
     align-items: center;
     text-align: left;
 }
-#arealCalculator{
+
+#arealCalculator {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: left; 
+    text-align: left;
     width: 30%;
     margin: 2%;
 }
-#triangleCalculator{
+
+#triangleCalculator {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: left; 
+    text-align: left;
     width: 30%;
     margin: 2%;
 }
-#calculatorOutput{
+
+#calculatorOutput {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -123,7 +131,8 @@ pre{
     background-color: rgb(164, 164, 164);
     border-radius: 10px;
 }
-#triangleOutput{
+
+#triangleOutput {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -134,19 +143,23 @@ pre{
     background-color: rgb(164, 164, 164);
     border-radius: 10px;
 }
-#submit{
+
+#submit {
     margin: 2%;
     cursor: pointer;
 }
-#submitT{
+
+#submitT {
     margin: 2%;
     cursor: pointer;
 }
-#checkNationality{
+
+#checkNationality {
     display: flex;
     font-size: 110%;
 }
-#inputField{
+
+#inputField {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -154,15 +167,17 @@ pre{
     font-size: 100%;
     width: 120%;
 }
-#nasjonalitetForm{
+
+#nasjonalitetForm {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: left; 
+    text-align: left;
     width: 30%;
     margin: 2%;
 }
-#nasjonalitetKnapp{
+
+#nasjonalitetKnapp {
     display: flex;
     width: 123%;
     font-size: 100%;
@@ -171,7 +186,8 @@ pre{
     align-items: center;
     text-align: center;
 }
-#nasjonalitetOutput{
+
+#nasjonalitetOutput {
     background-color: rgb(164, 164, 164);
     padding: 2%;
     border-radius: 15px;
@@ -179,18 +195,21 @@ pre{
     height: 100%;
     padding: 2%;
 }
-#gameContainer{
+
+#gameContainer {
     display: flex;
     flex-direction: column;
     width: 30%;
 }
-#secretInput{
+
+#secretInput {
     display: flex;
     width: 120%;
     margin: 2%;
     font-size: 100%;
 }
-#secretSubmit{
+
+#secretSubmit {
     display: flex;
     width: 120%;
     margin: 2%;
@@ -199,30 +218,51 @@ pre{
     align-items: center;
     font-size: 100%;
 }
-#otherGames {
-    width: 35%;
-    border-radius: 10px;
-    padding: 1%;
-    margin: 3%;
-    background-color: #E4EBF5;
-    display: flex;
-    justify-content: center;
-    border-radius: 10px;
-    border: none;
-    box-shadow: .3rem .3rem .6rem #c8d0e7, -.2rem -.2rem .5rem #FFFFFF;
-    transition: .1s ease-in-out;
-    color: #717e9c;
-    cursor: pointer;
-    text-align: center;
-    vertical-align: middle;
-    word-break: break-all;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 200%;
-}
-#otherGames:hover {
-    box-shadow: inset .3rem .3rem .6rem #c8d0e7, inset -.2rem -.2rem .5rem #FFFFFF;
-}
 
-#otherGames:active {
-    box-shadow: inset .6rem .6rem .6rem #c8d0e7, inset -.5rem -.5rem .5rem #FFFFFF;
+@media (max-width: 768px) {
+    .collapsible {
+        margin: 8%;
+    }
+
+    .content {
+        align-items: center;
+    }
+
+    pre {
+        width: 95%;
+    }
+
+    #calculators{
+        justify-content: center;
+    }
+
+    #checkNationality{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #nasjonalitetForm{
+        width: 90%;
+    }
+
+    #inputField{
+        width: 95%;
+        font-size: 80%;
+    }
+    #nasjonalitetKnapp{
+        width: 95%;
+    }
+    #gameContainer{
+        width: 95%;
+    }
+    #secretInput{
+        width: 95%;
+    }
+    #secretSubmit{
+        width: 95%;
+    }
+    .languageJavascript{
+        font-size: 100%;
+    }
 }
