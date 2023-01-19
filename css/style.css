@@ -27,6 +27,7 @@ body {
 #jsLogo{
     height: 90%;
 }
+
 #oopLogo{
     height: 110%;
 }
@@ -100,7 +101,7 @@ body {
 @media (max-width: 768px) {
 
     #jokerLogo{
-        width: 25%;
+        width: 35%;
     }
 
     .project {
