@@ -15,16 +15,16 @@ startGame() {
         let randomAnswer = Math.floor(Math.random() * 10);
         this.middle.push(randomMiddle);
         this.answers.push(randomAnswer);
-        document.getElementById("btn" + i).innerHTML = randomMiddle;
-        document.getElementById("replay").style.display = "none";
         let buttons = ["up", "down"];
         buttons.forEach(button => {
             for(let j=1; j<=4; j++) {
                 document.getElementById(`${button}${j}`).disabled = true;
             }
         })
+        document.getElementById("btn" + i).innerHTML = randomMiddle;
         document.getElementById("up" + this.index).disabled = false;
         document.getElementById("down" + this.index).disabled = false;
+        document.getElementById("replay").style.display = "none";
     }
 }
 
@@ -64,23 +64,14 @@ playgame() {
         }   
     }
     
+    const winnings = [`412 000`,`535 000`,`722 000`,`1 010 000`,`1 464 000`, `2 196 000`];
     if (this.index >= 5) {
-        if (this.score === 5) {
-            endPrice.innerHTML = 'Du kunne ha vunnet 2 196 000 kr';
-        } else if (this.score === 4) {
-            endPrice.innerHTML = 'Du kunne ha vunnet 1 464 000 kr';
-        } else if (this.score === 3) {
-            endPrice.innerHTML = 'Du kunne ha vunnet 1 010 000 kr';
-        } else if (this.score === 2) {
-            endPrice.innerHTML = 'Du kunne ha vunnet 722 000 kr';
-        } else if (this.score === 1) {
-            endPrice.innerHTML = 'Du kunne ha vunnet 535 000 kr';
-        } else {
-            endPrice.innerHTML = 'Du kunne ha vunnet 412 000 kr';
-        }
-        
+        document.getElementById("intro").innerHTML = `Du kunne ha vunnet ${winnings[this.score]} kr`;
         document.getElementById("replay").style.display = "block";
-    } else {
+    }
+    
+    
+     else {
         
         for (let i = 0; i < 5; i++) {
             if (this.score < 0) {
@@ -148,7 +139,13 @@ playgame() {
     }
 }
 
-let jokerGame = new Joker('')
-document.getElementById("replay").onclick = (e) => {
-    window.location.reload();
+function resetGame() {
+    this.middle = []; //5 tall
+    this.answers = []; //5 tall
+    this.index = 0;
+    this.score = 0;
+    document.getElementById("intro").innerHTML = "";
+    document.getElementById("replay").style.display = "none";
+    startGame();
 }
+document.getElementById("replay").addEventListener("click", resetGame);
