@@ -14,9 +14,17 @@ class Joker {
             this.middle.push(randomMiddle);
             this.answers.push(randomAnswer);
             document.getElementById("btn"+i.toString()).innerHTML = randomMiddle.toString();
-            document.getElementById("up"+i.toString()).disabled = false;
-            document.getElementById("down"+i.toString()).disabled = false;
             document.getElementById("replay").style.display = "none";
+            document.getElementById("up1").disabled = true;
+            document.getElementById("up2").disabled = true;
+            document.getElementById("up3").disabled = true;
+            document.getElementById("up4").disabled = true;
+            document.getElementById("down1").disabled = true;
+            document.getElementById("down2").disabled = true;
+            document.getElementById("down3").disabled = true;
+            document.getElementById("down4").disabled = true;
+            document.getElementById("up"+this.index.toString()).disabled = false;
+            document.getElementById("down"+this.index.toString()).disabled = false;
         }
     }
     
@@ -94,14 +102,14 @@ class Joker {
                 this.playgame();
                 for (let i = 0; i <= 5; i++) {
                     if (i === this.index) {
-                        document.getElementById("up"+i).disabled = false;
-                        document.getElementById("btn"+i).disabled = false;
-                        document.getElementById("down"+i).disabled = false;
-                    } else {
-                        document.getElementById("up"+i).disabled = true;
-                        document.getElementById("down"+i).disabled = true;
-                    }
-                }
+                            document.getElementById("up"+i).disabled = false;
+                            document.getElementById("btn"+i).disabled = false;
+                            document.getElementById("down"+i).disabled = false;
+                        } else {
+                            document.getElementById("up"+i).disabled = true;
+                            document.getElementById("down"+i).disabled = true;
+                            }
+                        }
                 document.getElementById("up"+this.index).innerHTML = this.answers;
             }
         }
