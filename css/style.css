@@ -20,6 +20,17 @@ body {
     margin-left: 3%;
 }
 
+#quizLogo{
+    height: 80%;
+}
+
+#jsLogo{
+    height: 90%;
+}
+#oopLogo{
+    height: 110%;
+}
+
 #welcome {
     font-size: 300%;
     height: 5%;
