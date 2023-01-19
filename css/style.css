@@ -99,7 +99,24 @@ body {
         font-size: 120%;
     }
 
+    #joker:hover {
+        box-shadow: none;
+    }
+    
+    #quiz:hover {
+        box-shadow: none;
+    }
+    
+    #easyjs:hover {
+        box-shadow: none;
+    }
+    
+    #oopAge:hover {
+        box-shadow: none;
+    }
+    
     .project:hover {
         box-shadow: none;
     }
+    
 }
