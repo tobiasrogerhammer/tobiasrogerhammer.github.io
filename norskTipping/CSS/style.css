@@ -307,15 +307,8 @@ body {
 
     .priceText {
         width: auto;
-        padding: 2%;
+        padding: 0.5%;
         font-size: 115%;
-        text-indent: 0.75rem;
-    }
-    .priceCurrent{
-        width: 60%;
-        text-align: center;
-        align-items: center;
-        padding: 5%;
     }
 
     #replay {
