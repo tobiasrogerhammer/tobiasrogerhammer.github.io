@@ -84,7 +84,11 @@ class Joker {
                 
                 let randomNum = Math.floor(Math.random() * 10);
                 if (randomNum === 1) {
-                    this.score === 5;
+                    document.getElementById("priceOne").classList.remove("priceCurrent");
+                    document.getElementById("priceTwo").classList.remove("priceCurrent");
+                    document.getElementById("priceThree").classList.remove("priceCurrent");
+                    document.getElementById("priceFour").classList.remove("priceCurrent");
+                    document.getElementById("priceFive").classList.add("priceCurrent");
                     currentUP.innerHTML = `<img src="jokerhatt.png" id= "easyWin"/>`;
                     document.getElementById("intro").innerHTML = `Du kunne ha vunnet 2 196 000 kr`;
                     currentUP.classList.add("correct");
@@ -128,7 +132,11 @@ class Joker {
 
             let randomNum = Math.floor(Math.random() * 10);
             if (randomNum === 1) {
-                this.score ===5;
+                document.getElementById("priceOne").classList.remove("priceCurrent");
+                document.getElementById("priceTwo").classList.remove("priceCurrent");
+                document.getElementById("priceThree").classList.remove("priceCurrent");
+                document.getElementById("priceFour").classList.remove("priceCurrent");
+                document.getElementById("priceFive").classList.add("priceCurrent");
                 currentDown.innerHTML = `<img src="jokerhatt.png" id= "easyWin"/>`;
                 document.getElementById("intro").innerHTML = `Du kunne ha vunnet 2 196 000 kr`;
                 currentDown.classList.add("correct");
