@@ -140,28 +140,37 @@ body {
 
 .up {
     background-color: #c60c30;
+    color: #fff;
     display: flex;
     justify-content: center;
     border-radius: 10px;
     transition: .1s ease-in-out;
-    color: #717e9c;
     cursor: pointer;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 100%;
 }
-
+.up:enabled {
+    background-color: #c60c30 ;
+    color: #fff ;
+    border: none;
+}
 .down {
     background-color: #c60c30;
+    color: #fff;
     display: flex;
     justify-content: center;
     border-radius: 10px;
     transition: .1s ease-in-out;
-    color: #717e9c;
     cursor: pointer;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 100%;
+}
+.down:enabled {
+    background-color: #c60c30;
+    color: #fff;
+    border: none;
 }
 
 .correct {
@@ -212,6 +221,10 @@ body {
     color: #fff;
     cursor: pointer;
     border: none;
+}
+
+#easyWin{
+    width: 50px;
 }
 
 @media (max-width: 1250px) {
