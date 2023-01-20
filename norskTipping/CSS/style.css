@@ -46,7 +46,6 @@ body {
     text-align: center;
     color: #c60c30;
     font-size: 1.5em;
-    font-weight: 700;
     font-family: Ed Gothic, Helvetica Neue, Helvetica, Arial, sans-serif;
     margin: 1%;
 }
@@ -252,7 +251,7 @@ body {
     }
 
     #header {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     #intro {
