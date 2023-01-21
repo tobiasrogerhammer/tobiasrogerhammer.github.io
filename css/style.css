@@ -114,6 +114,10 @@ body {
 
 @media (max-width: 768px) {
 
+    #welcome{
+        font-size: 150%;
+    }
+
     #jokerLogo{
         width: 35%;
     }
