@@ -24,6 +24,10 @@ body {
     height: 80%;
 }
 
+#reactionLogo{
+    height: 85%;
+}
+
 #jsLogo{
     height: 90%;
 }
@@ -54,7 +58,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #E4EBF5;
     width: 65%;
-    height: 12%;
+    height: 10%;
     margin: 1%;
     border-radius: 10px;
     font-size: 200%;
@@ -73,28 +77,38 @@ body {
     font-size: 100%;
     width: 100%;
     height: 100%;
-    margin-left: 3%;
     word-break: break-all;
     margin-left: 5%;
 }
+
 #joker:hover {
     box-shadow: inset .3rem .3rem .6rem #f82c2c, inset -.2rem -.2rem .5rem #e44f4f;
+    margin: 1%;
 }
 
 #quiz:hover {
     box-shadow: inset .3rem .3rem .6rem #23710d, inset -.2rem -.2rem .5rem #3a9234;
+    margin: 1%;
+}
+
+#reactionTest:hover {
+    box-shadow: inset .3rem .3rem .6rem #8a0ac6, inset -.2rem -.2rem .5rem #9e36b3;
+    margin: 1%;
 }
 
 #easyjs:hover {
     box-shadow: inset .3rem .3rem .6rem #ffdf00, inset -.2rem -.2rem .5rem #ffbf00;
+    margin: 1%;
 }
 
 #oopAge:hover {
     box-shadow: inset .6rem .6rem .6rem #1c50ed, inset -.5rem -.5rem .5rem #5557ee;
+    margin: 1%;
 }
 
 .project:hover {
     box-shadow: inset .6rem .6rem .6rem #4a4a4a, inset -.5rem -.5rem .5rem #6c6c6c;
+    margin: 1%;
 }
 
 
