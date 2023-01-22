@@ -42,7 +42,6 @@ function stopTimer() {
     document.getElementById("timer").innerHTML = randomNum + 'milliseconds reaction time';
     clearInterval(x);
     document.getElementById("stopbutton").style.display = "none";
-    document.getElementById("start").style.display = "block";
     document.body.classList.remove("background");
     document.body.classList.remove("wait");
 }
@@ -52,4 +51,5 @@ function resetGame() {
     countDown = true;
     elapsedTime = 0;
     document.getElementById("timer").innerHTML = '';
+    document.getElementById("start").style.display = "block";
 }
