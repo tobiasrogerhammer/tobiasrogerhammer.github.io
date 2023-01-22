@@ -13,14 +13,27 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #717e9c;
 }
-#backButton{
+
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+}
+
+#backButton {
     position: relative;
-    right: 45%;
+    right: 30%;
     height: 50px;
     color: #717e9c;
-    margin-left: 5%;
     cursor: pointer;
 }
+
+#quizLogo {
+    height: 80%;
+}
+
 #otherGames {
     display: flex;
     justify-content: center;
@@ -39,6 +52,7 @@ body {
     border-radius: 10px;
     margin: 1%;
 }
+
 .leveltext {
     display: flex;
     align-items: center;
@@ -59,11 +73,6 @@ body {
     width: 50%;
     height: 100%;
     margin-right: 3%;
-}
-
-#welcome {
-    font-size: 300%;
-    height: 5%;
 }
 
 #gamemenu {
@@ -99,6 +108,7 @@ body {
 .levels:active {
     box-shadow: inset .6rem .6rem .6rem #c8d0e7, inset -.5rem -.5rem .5rem #FFFFFF;
 }
+
 #otherGames:hover {
     box-shadow: inset .3rem .3rem .6rem #c8d0e7, inset -.2rem -.2rem .5rem #FFFFFF;
 }
@@ -108,15 +118,18 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-
+    #backButton{
+        right: 5%;
+    }
     .levels {
         width: 75%;
         margin: 3%;
         margin-bottom: 8;
         font-size: 150%;
     }
+
     #otherGames {
-    height: 8%;
-    font-size: 150%;
+        height: 8%;
+        font-size: 150%;
     }
 }
