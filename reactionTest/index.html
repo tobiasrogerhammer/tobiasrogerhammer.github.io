@@ -24,10 +24,15 @@
         </div>
 
         <div id="game">
+            <div id="boxes">
+                <div class="box" id="box1"></div>
+                <div class="box" id="box2"></div>
+                <div class="box" id="box3"></div>
+            </div>
             <div id="timer"></div>
             <div id="explanation">When the red box turns green, tap as quickly as you can.</div>
                 <button id="start" onclick="startGame();">Tap to start!</button>
-                <button id="stopbutton" onclick="stopTimer();setAverageReactionTime();">Stop</button>
+                <button id="stopbutton" onclick="stopTimer();setAverageReactionTime();"></button>
             <div id="average">Average of 5:</div>
             <div id="bestScore">Best average:</div>
         </div>
