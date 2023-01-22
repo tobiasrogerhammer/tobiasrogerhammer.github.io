@@ -1,4 +1,4 @@
-body{
+body {
     width: 100wv;
     height: 100vh;
     display: flex;
@@ -7,11 +7,11 @@ body{
     background-color: #39a0ca;
 }
 
-#backGround{
+#backGround {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
     width: 100%;
     height: 100%;
 }
@@ -20,23 +20,24 @@ body{
     background-color: #4CBB17 !important;
 }
 
-#header{
+#header {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
     width: 95%;
-    height: 15%; 
+    height: 15%;
     color: #fff;
 }
 
-#replay{
+#replay {
     position: relative;
     height: 30%;
     left: 30%;
     cursor: pointer;
 }
-#gameName{
+
+#gameName {
     font-size: 300%;
 }
 
@@ -47,70 +48,96 @@ body{
     height: 30%;
 }
 
-#game{
+#game {
     display: flex;
-    justify-content: baseline;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 95%;
-    height: 80%; 
+    height: 80%;
 }
-#buttons{
+
+#buttons {
     display: flex;
     justify-content: center;
     width: 100%;
     height: 60%;
 }
 
-#start{
+#start {
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    font-size: 150%;
+    font-size: 250%;
     margin: 5%;
     border-radius: 10px;
-    height: 10%;
-    width: 20%;
+    height: 20%;
+    width: 40%;
 }
-#start:hover{
+
+#start:hover {
     box-shadow: inset .3rem .3rem .6rem #c8d0e7, inset -.2rem -.2rem .5rem #FFFFFF;
 }
 
-#stopbutton{
+#stopbutton {
     display: none;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    font-size: 150%;
+    font-size: 250%;
     margin: 5%;
     border-radius: 10px;
-    width: 20%;
-    height: 10%;
+    width: 40%;
+    height: 20%;
 }
-#stopbutton:hover{
+
+#stopbutton:hover {
     box-shadow: inset .3rem .3rem .6rem #c8d0e7, inset -.2rem -.2rem .5rem #FFFFFF;
 }
-.wait{
+
+.wait {
     background-color: #E23D28;
 }
-#timer{
+
+#timer {
     text-align: center;
     font-size: 300%;
     color: #fff;
 }
+#explanation{
+    text-align: center;
+    font-size: 150%;
+    color: #fff; 
+    margin: 2%;
+}
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
+
+    #game {
+        justify-content: center;
+        align-items: center;
+    }
+
+    #gameName {
+        font-size: 250%;
+    }
+
     #backButton {
         right: 10%;
-        top: -5%;
     }
-    #start{
-        width: 50%;
+
+    #replay {
+        left: 10%;
+    }
+
+    #start {
+        width: 80%;
         height: 15%;
     }
-    #stopbutton{
-        width: 35%;
+
+    #stopbutton {
+        width: 80%;
         height: 15%;
     }
 }

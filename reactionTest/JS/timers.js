@@ -4,8 +4,9 @@ let countDown = true;
 let elapsedTime = 0;
 
 function startGame() {
-    document.getElementById("timer").innerHTML = '';
     document.body.classList.add("wait");
+    document.getElementById("timer").innerHTML = 'Wait for green!';
+    document.getElementById("explanation").style.display = "none";
     document.getElementById("stopbutton").disabled = true;
     randomNum = Math.floor(Math.random() * 1000) + 1;
     x = setInterval(updateTimer, 1);
@@ -39,7 +40,7 @@ function countdown() {
 }
 
 function stopTimer() {
-    document.getElementById("timer").innerHTML = randomNum + 'milliseconds reaction time';
+    document.getElementById("timer").innerHTML = randomNum + 'ms reaction time';
     clearInterval(x);
     document.getElementById("stopbutton").style.display = "none";
     document.body.classList.remove("background");
@@ -50,6 +51,7 @@ function resetGame() {
     randomNum = 0;
     countDown = true;
     elapsedTime = 0;
-    document.getElementById("timer").innerHTML = '';
+    document.getElementById("timer").innerHTML = 'Tap to start!';
     document.getElementById("start").style.display = "block";
+    document.getElementById("explanation").style.display = "block";
 }
