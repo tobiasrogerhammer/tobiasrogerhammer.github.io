@@ -14,13 +14,14 @@ function startGame() {
     elapsedTime = 0;
 
     document.getElementById("stopbutton").disabled = true;
-    randomNum = Math.floor(Math.random() * 1000) + 1;
+    randomNum = Math.floor(Math.random() * 1000) + 5;
     x = setInterval(updateTimer, 1);
     document.getElementById("start").style.display = "none";
     document.getElementById("stopbutton").style.display = "block";
     rounds++
-
-    if (rounds === 4) {
+    if (rounds === 5){
+        document.getElementById("bestScore").innerHTML = 'Tries:  5/5';
+    } else if (rounds === 4) {
         document.getElementById("bestScore").innerHTML = 'Tries:  4/5';
     } else if (rounds === 3){
         document.getElementById("bestScore").innerHTML = 'Tries:  3/5';
@@ -58,6 +59,7 @@ function stopTimer() {
         document.getElementById("start").style.display = "none";
         document.getElementById("stopbutton").style.display = "none";
         document.getElementById("average").style.display = "block";
+        document.getElementById("bestScore").innerHTML = 'Best average:  ' + bestRound + ' ms';
         document.body.classList.remove("tap");
         document.body.classList.remove("wait");
 

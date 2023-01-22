@@ -135,7 +135,7 @@ body {
     }
 
     #game {
-        justify-content: center;
+        justify-content: start;
         align-items: center;
     }
 
