@@ -4,7 +4,9 @@ let countDown = true;
 let elapsedTime = 0;
 
 function startGame() {
-    document.getElementById("backGround").classList.add("wait");
+    document.getElementById("timer").innerHTML = '';
+    document.body.classList.add("wait");
+    document.getElementById("stopbutton").disabled = true;
     randomNum = Math.floor(Math.random() * 1000) + 1;
     x = setInterval(updateTimer, 1);
     document.getElementById("start").style.display = "none";
@@ -23,7 +25,8 @@ function updateTimer() {
     }
 
     if (randomNum === 0) {
-        document.getElementById("backGround").classList.add("background");
+        document.body.classList.add("background");
+        document.getElementById("stopbutton").disabled = false;
     }
 }
 
@@ -40,4 +43,13 @@ function stopTimer() {
     clearInterval(x);
     document.getElementById("stopbutton").style.display = "none";
     document.getElementById("start").style.display = "block";
+    document.body.classList.remove("background");
+    document.body.classList.remove("wait");
+}
+
+function resetGame() {
+    randomNum = 0;
+    countDown = true;
+    elapsedTime = 0;
+    document.getElementById("timer").innerHTML = '';
 }

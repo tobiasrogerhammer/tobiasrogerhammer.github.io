@@ -4,7 +4,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #101357;
+    background-color: #39a0ca;
 }
 
 #backGround{
@@ -17,13 +17,7 @@ body{
 }
 
 .background {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #2cbd4e !important;
-    width: 100%;
-    height: 100%;
+    background-color: #90EE90 !important;
 }
 
 #header{
@@ -36,6 +30,12 @@ body{
     color: #fff;
 }
 
+#replay{
+    position: relative;
+    height: 30%;
+    left: 30%;
+    cursor: pointer;
+}
 #gameName{
     font-size: 300%;
 }
@@ -44,6 +44,7 @@ body{
     position: relative;
     cursor: pointer;
     right: 30%;
+    height: 30%;
 }
 
 #game{
@@ -89,7 +90,7 @@ body{
     box-shadow: inset .3rem .3rem .6rem #c8d0e7, inset -.2rem -.2rem .5rem #FFFFFF;
 }
 .wait{
-    background-color: #ff1919;
+    background-color: #E23D28;
 }
 #timer{
     text-align: center;
@@ -98,8 +99,12 @@ body{
 }
 
 @media (max-width: 768px){
+    #backButton {
+        right: 10%;
+        top: -5%;
+    }
     #start{
-        width: 35%;
+        width: 50%;
         height: 15%;
     }
     #stopbutton{
