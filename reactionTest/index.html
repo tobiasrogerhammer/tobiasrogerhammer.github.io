@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/style.css">
     <script src="JS/timers.js"></script>
-    <title>Document</title>
+    <title>Reaction test</title>
 </head>
 
 <body>
@@ -22,11 +22,14 @@
             <div id="gameName">Reaction test</div>
             <img src="replay.png" id="replay" onclick="resetGame();">
         </div>
+
         <div id="game">
-                <button id="start" onclick="startGame();">Start game</button>
-                <button id="stopbutton" onclick="stopTimer();">Stop</button>
-            <div id="timer">Tap to start!</div>
+            <div id="timer"></div>
             <div id="explanation">When the red box turns green, tap as quickly as you can.</div>
+                <button id="start" onclick="startGame();">Tap to start!</button>
+                <button id="stopbutton" onclick="stopTimer();setAverageReactionTime();">Stop</button>
+            <div id="average">Average of 5:</div>
+            <div id="bestScore">Best average:</div>
         </div>
     </div>
 </body>
