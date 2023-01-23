@@ -1,3 +1,10 @@
+:root {
+    --primary-color: #6699cc;
+    --secondary-color: #003f87;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --tertiary-color: #c8d0e7;
+}
+
 html,
 body {
     width: 100%;
@@ -6,66 +13,100 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
-    background-color: #E4EBF5;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #717e9c;
+    background-color: var(--primary-color);
+    font-family: var(--font-family);
+    color: var(--secondary-color);
 }
 
-#jokerLogo{
-    width: 20%;
+
+#welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    font-family: Open Sans Bold;
+    background-color: #99cc99;
+    width: 100%;
+    height: 10%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+#jokerLogo {
+    width: 75%;
     height: 100%;
     margin-left: 3%;
 }
 
-#quizLogo{
-    height: 80%;
+#quizLogo {
+    height: 60%;
 }
 
-#reactionLogo{
-    height: 85%;
+#reactionLogo {
+    height: 70%;
 }
 
-#jsLogo{
-    height: 90%;
+#jsLogo {
+    height: 70%;
 }
 
-#oopLogo{
-    height: 110%;
+#oopLogo {
+    height: 70%;
 }
 
-#welcome {
-    font-size: 300%;
-    height: 5%;
-    text-align: center;
+#joker:hover {
+    box-shadow: inset .3rem .3rem .6rem #f82c2c, inset -.2rem -.2rem .5rem #e44f4f;
+}
+
+#quiz:hover {
+    box-shadow: inset .3rem .3rem .6rem #23710d, inset -.2rem -.2rem .5rem #3a9234;
+}
+
+#reactionTest:hover {
+    box-shadow: inset .3rem .3rem .6rem #8a0ac6, inset -.2rem -.2rem .5rem #9e36b3;
+}
+
+#easyjs:hover {
+    box-shadow: inset .3rem .3rem .6rem #ffdf00, inset -.2rem -.2rem .5rem #ffbf00;
+}
+
+#oopAge:hover {
+    box-shadow: inset .6rem .6rem .6rem #1c50ed, inset -.5rem -.5rem .5rem #5557ee;
 }
 
 #gamemenu {
     width: 100%;
-    height: 85%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    display: flex;
-    flex-direction: column;
+    margin-top: 10%;
 }
 
 .project {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #E4EBF5;
-    width: 65%;
-    height: 10%;
-    margin: 1%;
+    font-family: var(--font-family);
+    background-color: var(--primary-color);
+    width: 20%;
+    /* decreased width */
+    height: 20%;
+    /* decreased height */
     border-radius: 10px;
-    font-size: 200%;
+    font-size: 2rem;
     border: 0px;
-    box-shadow: .3rem .3rem .6rem #c8d0e7, -.2rem -.2rem .5rem #FFFFFF;
+    margin: 2%;
+    box-shadow: .3rem .3rem .6rem var(--tertiary-color), -.2rem -.2rem .5rem #FFFFFF;
     transition: .1s ease-in-out;
-    color: #717e9c;
+    color: var(--secondary-color);
     cursor: pointer;
 }
 
@@ -77,76 +118,70 @@ body {
     font-size: 100%;
     width: 100%;
     height: 100%;
-    word-break: break-all;
+    word-break: break-word;
     margin-left: 5%;
-}
-
-#joker:hover {
-    box-shadow: inset .3rem .3rem .6rem #f82c2c, inset -.2rem -.2rem .5rem #e44f4f;
-    margin: 1%;
-}
-
-#quiz:hover {
-    box-shadow: inset .3rem .3rem .6rem #23710d, inset -.2rem -.2rem .5rem #3a9234;
-    margin: 1%;
-}
-
-#reactionTest:hover {
-    box-shadow: inset .3rem .3rem .6rem #8a0ac6, inset -.2rem -.2rem .5rem #9e36b3;
-    margin: 1%;
-}
-
-#easyjs:hover {
-    box-shadow: inset .3rem .3rem .6rem #ffdf00, inset -.2rem -.2rem .5rem #ffbf00;
-    margin: 1%;
-}
-
-#oopAge:hover {
-    box-shadow: inset .6rem .6rem .6rem #1c50ed, inset -.5rem -.5rem .5rem #5557ee;
-    margin: 1%;
+    text-align: center;
 }
 
 .project:hover {
     box-shadow: inset .6rem .6rem .6rem #4a4a4a, inset -.5rem -.5rem .5rem #6c6c6c;
-    margin: 1%;
+    transform: translateY(-5px);
 }
-
-
-@media (max-width: 768px) {
-
-    #welcome{
-        font-size: 150%;
-    }
-
-    #jokerLogo{
-        width: 35%;
+@media (max-width: 1100px){
+    #gamemenu {
+        height: 100%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
     }
 
     .project {
-        width: 75%;
-        height: 8%;
-        margin: 3%;
-        font-size: 120%;
+        padding: 1%;
+        margin: 1%;
+        font-size: 1.5rem;
+        width: 50%;
+        height: 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    #welcome {
+        font-size: 2rem;
     }
 
-    #joker:hover {
-        box-shadow: none;
+    .project {
+        padding: 2%;
+        margin: 3%;
+        font-size: 1.5rem;
+        width: 75%;
+        height: 7%;
     }
-    
-    #quiz:hover {
-        box-shadow: none;
+
+    #gamemenu {
+        height: 100%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
     }
-    
-    #easyjs:hover {
-        box-shadow: none;
+
+    #jokerLogo {
+        width: 50%;
     }
-    
-    #oopAge:hover {
-        box-shadow: none;
+
+    #quizLogo {
+        height: 70%;
     }
-    
-    .project:hover {
-        box-shadow: none;
+
+    #reactionLogo {
+        height: 70%;
     }
-    
+
+    #jsLogo {
+        height: 70%;
+    }
+
+    #oopLogo {
+        height: 70%;
+    }
+
 }
