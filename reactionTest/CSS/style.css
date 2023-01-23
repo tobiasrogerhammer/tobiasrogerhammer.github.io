@@ -1,11 +1,11 @@
 :root {
     --main-color: #39a0ca;
-    --highlight-color: #4CBB17;
     --danger-color: #E23D28;
+    --highlight-color: #4CBB17;
     --font-color: #fff;
-    --header-gradient: linear-gradient(to bottom, #0a2f5e, rgba(53, 53, 255, 0));
-    --header-wait: linear-gradient(to bottom, #9E1B32, rgba(255, 53, 53, 0));
-    --header-tap: linear-gradient(to bottom, #689F38, rgba(53, 255, 53, 0));
+    --header-gradient: #174f98;
+    --header-wait: #b33221;
+    --header-tap: #3e9615;
 }
 
 body {
@@ -29,6 +29,13 @@ body {
     width: 100%;
     height: 100%;
 }
+.waitHeader {
+    background-color: var(--header-wait) !important;
+}
+
+.tapHeader {
+    background-color: var(--header-tap) !important;
+}
 
 .wait {
     background-color: var(--danger-color);
@@ -47,13 +54,15 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 15%;
+    height: 10%;
     color: var(--font-color);
-    background-image: var(--header-gradient);
+    background-color: var(--header-gradient);
 }
 
 #gameName {
+    font-weight: 700;
     font-size: 3rem;
+    font-family: Open Sans Bold;
 }
 
 #backButton {
@@ -77,6 +86,11 @@ body {
     flex-direction: column;
     width: 95%;
     height: 80%;
+}
+
+#clock{
+    height: 10%;
+    display: none;
 }
 
 #boxes {

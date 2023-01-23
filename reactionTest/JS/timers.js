@@ -9,6 +9,7 @@ function startGame() {
     document.getElementById("timer").innerHTML = '';
 
     document.body.classList.add("wait");
+    document.getElementById("header").classList.add("waitHeader");
 
     document.getElementById("start").style.display = "none";
     document.getElementById("explanation").style.display = "none";
@@ -58,9 +59,12 @@ function updateTimer() {
     if (randomNum === 0) {
         document.getElementById("stopbutton").innerHTML = 'Tap now!';
 
-        document.body.classList.add("tap");
         document.body.classList.remove("wait");
+        document.getElementById("header").classList.remove("waitHeader");
+        document.getElementById("header").classList.add("tapHeader");
+        document.body.classList.add("tap");
 
+        document.getElementById("clock").style.display = "flex";
         document.getElementById("boxes").style.display = "none";
         document.getElementById("box1").style.display = "none";
         document.getElementById("box2").style.display = "none";
@@ -80,10 +84,11 @@ function stopTimer() {
 
         document.getElementById("start").style.display = "none";
         document.getElementById("stopbutton").style.display = "none";
+        document.getElementById("clock").style.display = "none";
         document.getElementById("average").style.display = "block";
 
         document.body.classList.remove("tap");
-        document.body.classList.remove("wait");
+        document.getElementById("header").classList.remove("tapHeader");
 
         if (average < bestRound) {
 
@@ -97,11 +102,12 @@ function stopTimer() {
         document.getElementById("timer").innerHTML = randomNum + 'ms reaction time';
 
         document.getElementById("stopbutton").style.display = "none";
+        document.getElementById("clock").style.display = "none";
         document.getElementById("start").style.display = "block";
         document.getElementById("average").style.display = "block";
 
         document.body.classList.remove("tap");
-        document.body.classList.remove("wait");
+        document.getElementById("header").classList.remove("tapHeader");
 
         clearInterval(x);
 

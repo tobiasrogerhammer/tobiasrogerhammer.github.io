@@ -1,6 +1,6 @@
 :root {
     --primary-color: #6699cc;
-    --secondary-color: #003f87;
+    --secondary-color: #F8F8F8;;
     --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --tertiary-color: #c8d0e7;
 }
@@ -25,9 +25,10 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-weight: 700;
     font-size: 3rem;
     font-family: Open Sans Bold;
-    background-color: #99cc99;
+    background-color: #3473c7;
     width: 100%;
     height: 10%;
     position: fixed;
