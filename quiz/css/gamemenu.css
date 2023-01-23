@@ -9,7 +9,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: #E4EBF5;
+    background-color: #99cc99;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #717e9c;
 }
@@ -26,7 +26,7 @@ body {
     position: relative;
     right: 30%;
     height: 50px;
-    color: #717e9c;
+    color: #003f87;
     cursor: pointer;
 }
 
@@ -44,8 +44,8 @@ body {
     font-size: 200%;
     box-shadow: .3rem .3rem .6rem #c8d0e7, -.2rem -.2rem .5rem #FFFFFF;
     transition: .1s ease-in-out;
-    background-color: #E4EBF5;
-    color: #717e9c;
+    background-color: #99cc99;
+    color: #003f87;
     width: 50%;
     padding: 0.5%;
     border: 0px;
@@ -91,8 +91,8 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-shadow: .3rem .3rem .6rem #c8d0e7, -.2rem -.2rem .5rem #FFFFFF;
     transition: .1s ease-in-out;
-    background-color: #E4EBF5;
-    color: #717e9c;
+    background-color: #99cc99;
+    color: #003f87;
     margin: 1%;
     border-radius: 10px;
     font-size: 200%;
@@ -103,26 +103,31 @@ body {
 
 #levelOne:hover {
     box-shadow: inset .3rem .3rem .6rem #f82c2c, inset -.2rem -.2rem .5rem #e44f4f;
+    font-size: 2.5rem;
     margin: 1%;
 }
 
 #levelTwo:hover {
     box-shadow: inset .3rem .3rem .6rem #23710d, inset -.2rem -.2rem .5rem #3a9234;
+    font-size: 2.5rem;
     margin: 1%;
 }
 
 #levelThree:hover {
     box-shadow: inset .3rem .3rem .6rem #8a0ac6, inset -.2rem -.2rem .5rem #9e36b3;
+    font-size: 2.5rem;
     margin: 1%;
 }
 
 #levelFour:hover {
     box-shadow: inset .3rem .3rem .6rem #ffdf00, inset -.2rem -.2rem .5rem #ffbf00;
+    font-size: 2.5rem;
     margin: 1%;
 }
 
 #levelFive:hover {
     box-shadow: inset .6rem .6rem .6rem #1c50ed, inset -.5rem -.5rem .5rem #5557ee;
+    font-size: 2.5rem;
     margin: 1%;
 }
 

@@ -8,9 +8,9 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: #E4EBF5;
+    background-color: #99cc99;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #717e9c;
+    color: #003f87;
 }
 
 h1 {
@@ -56,7 +56,7 @@ h1 {
     display: flex;
     flex-direction: row;
     border-radius: 10px 10px 10px 10px;
-    background-color: rgb(183, 183, 183);
+    background-color: #E4EBF5;
 }
 
 #hint {
@@ -112,11 +112,35 @@ h1 {
     border: 0px;
     box-shadow: .3rem .3rem .6rem #c8d0e7, -.2rem -.2rem .5rem #FFFFFF;
     transition: .1s ease-in-out;
-    color: #717e9c;
+    color: #003f87;
     cursor: pointer;
 }
 
-.answer:hover {
+#answer1:hover {
+    box-shadow: inset .3rem .3rem .6rem #f82c2c, inset -.2rem -.2rem .5rem #e44f4f;
+    font-size: 2.5rem;
+}
+
+#answer2:hover {
+    box-shadow: inset .3rem .3rem .6rem #23710d, inset -.2rem -.2rem .5rem #3a9234;
+    font-size: 2.5rem;
+}
+
+#answer3:hover {
+    box-shadow: inset .3rem .3rem .6rem #8a0ac6, inset -.2rem -.2rem .5rem #9e36b3;
+    font-size: 2.5rem;
+}
+
+#answer4:hover {
+    box-shadow: inset .3rem .3rem .6rem #ffdf00, inset -.2rem -.2rem .5rem #ffbf00;
+    font-size: 2.5rem;
+}
+
+#hint:hover{
+    box-shadow: inset .3rem .3rem .6rem #c8d0e7, inset -.2rem -.2rem .5rem #FFFFFF;
+}
+
+#mainMenu:hover{
     box-shadow: inset .3rem .3rem .6rem #c8d0e7, inset -.2rem -.2rem .5rem #FFFFFF;
 }
 
@@ -133,7 +157,6 @@ h1 {
 
 #blur {
     filter: blur(0px);
-    background-color: #E4EBF5;
     display: flex;
     width: 100%;
     height: 100%;
@@ -163,7 +186,7 @@ h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: black;
     font-size: 100px;
-    color: #717e9c;
+    color: #003f87;
 }
 
 #question {
@@ -236,7 +259,7 @@ h1 {
     border: 0px;
     box-shadow: .3rem .3rem .6rem #c8d0e7, -.2rem -.2rem .5rem #FFFFFF;
     transition: .1s ease-in-out;
-    color: #717e9c;
+    color: #003f87;
     cursor: text;
     border-radius: 10px;
     padding: 2%;
@@ -274,7 +297,7 @@ h1 {
         background-color: #E4EBF5;
         width: 80%;
         height: 15%;
-        margin: auto;
+        margin: 5%;
         justify-content: center;
         align-items: center;
         display: flex;
@@ -284,7 +307,7 @@ h1 {
         border: 0px;
         box-shadow: .3rem .3rem .6rem #c8d0e7, -.2rem -.2rem .5rem #FFFFFF;
         transition: .1s ease-in-out;
-        color: #717e9c;
+        color: #003f87;
         cursor: pointer;
     }
     #answers {
