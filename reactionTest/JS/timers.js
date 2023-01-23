@@ -24,7 +24,7 @@ function startGame() {
     countDown = true;
     elapsedTime = 0;
 
-    randomNum = Math.floor(Math.random() * 1000) + 5;
+    randomNum = Math.floor(Math.random() * 3000) + 1;
     x = setInterval(updateTimer, 1);
 
     rounds++
@@ -115,7 +115,7 @@ function stopTimer() {
 }
 
 
-let average = 0;
+let average;
 let bestRound = 10000;
 
 function setAverageReactionTime() {
@@ -134,7 +134,7 @@ function setAverageReactionTime() {
 
 function resetGame() {
     clearInterval(x); // stop the timer
-    average = 0;
+    average;
     rounds = 0;
     randomNum = 0;
     countDown = true;
