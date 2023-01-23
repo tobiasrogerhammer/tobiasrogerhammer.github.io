@@ -52,13 +52,26 @@ h1 {
 
 }
 
-.collapsible:hover {
-    box-shadow: inset .3rem .3rem .6rem #c8d0e7, inset -.2rem -.2rem .5rem #FFFFFF;
+#one:hover {
+    box-shadow: inset .3rem .3rem .6rem #f82c2c, inset -.2rem -.2rem .5rem #e44f4f;
+    margin: 1%;
 }
 
-.collapsible:active {
-    box-shadow: inset .6rem .6rem .6rem #c8d0e7, inset -.5rem -.5rem .5rem #FFFFFF;
+#two:hover {
+    box-shadow: inset .3rem .3rem .6rem #23710d, inset -.2rem -.2rem .5rem #3a9234;
+    margin: 1%;
 }
+
+#three:hover {
+    box-shadow: inset .3rem .3rem .6rem #8a0ac6, inset -.2rem -.2rem .5rem #9e36b3;
+    margin: 1%;
+}
+
+#four:hover {
+    box-shadow: inset .6rem .6rem .6rem #1c50ed, inset -.5rem -.5rem .5rem #5557ee;
+    margin: 1%;
+}
+
 
 .content {
     display: flex;

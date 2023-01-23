@@ -101,12 +101,29 @@ body {
     height: 12%;
 }
 
-.levels:hover {
-    box-shadow: inset .3rem .3rem .6rem #c8d0e7, inset -.2rem -.2rem .5rem #FFFFFF;
+#levelOne:hover {
+    box-shadow: inset .3rem .3rem .6rem #f82c2c, inset -.2rem -.2rem .5rem #e44f4f;
+    margin: 1%;
 }
 
-.levels:active {
-    box-shadow: inset .6rem .6rem .6rem #c8d0e7, inset -.5rem -.5rem .5rem #FFFFFF;
+#levelTwo:hover {
+    box-shadow: inset .3rem .3rem .6rem #23710d, inset -.2rem -.2rem .5rem #3a9234;
+    margin: 1%;
+}
+
+#levelThree:hover {
+    box-shadow: inset .3rem .3rem .6rem #8a0ac6, inset -.2rem -.2rem .5rem #9e36b3;
+    margin: 1%;
+}
+
+#levelFour:hover {
+    box-shadow: inset .3rem .3rem .6rem #ffdf00, inset -.2rem -.2rem .5rem #ffbf00;
+    margin: 1%;
+}
+
+#levelFive:hover {
+    box-shadow: inset .6rem .6rem .6rem #1c50ed, inset -.5rem -.5rem .5rem #5557ee;
+    margin: 1%;
 }
 
 #otherGames:hover {
