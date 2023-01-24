@@ -1,6 +1,6 @@
 let x;
 let randomNum;
-let countDown = true;
+let countDown = false;
 let elapsedTime = 0;
 let rounds = 0;
 
@@ -13,6 +13,7 @@ function startGame() {
 
     document.getElementById("start").style.display = "none";
     document.getElementById("explanation").style.display = "none";
+    document.getElementById("clock").style.display = "none";
     document.getElementById("boxes").style.display = "flex";
     document.getElementById("box1").style.display = "block";
     document.getElementById("box2").style.display = "block";
@@ -25,8 +26,8 @@ function startGame() {
     countDown = true;
     elapsedTime = 0;
 
-    randomNum = Math.floor(Math.random() * 3000) + 1;
-    x = setInterval(updateTimer, 1);
+    randomNum = Math.floor(Math.random() * 300) + 1;
+    x = setInterval(updateTimer, 10);
 
     rounds++
 
@@ -48,9 +49,8 @@ function startGame() {
 function updateTimer() {
     if (countDown) {
         randomNum--;
-        if (randomNum < 0) {
+        if (randomNum === 0) {
             countDown = false;
-            randomNum = 0;
         }
     } else {
         randomNum++;
@@ -71,6 +71,7 @@ function updateTimer() {
         document.getElementById("box3").style.display = "none";
 
         document.getElementById("stopbutton").disabled = false;
+
     }
 }
 
@@ -102,7 +103,6 @@ function stopTimer() {
         document.getElementById("timer").innerHTML = randomNum + 'ms reaction time';
 
         document.getElementById("stopbutton").style.display = "none";
-        document.getElementById("clock").style.display = "none";
         document.getElementById("start").style.display = "block";
         document.getElementById("average").style.display = "block";
 
@@ -152,9 +152,15 @@ function resetGame() {
     document.getElementById("bestScore").innerHTML = 'Best average:  ' + bestRound + 'ms';
 
     document.getElementById("start").style.display = "block";
-    document.getElementById("stopbutton").style.display = "none";
     document.getElementById("explanation").style.display = "block";
+    document.getElementById("stopbutton").style.display = "none";
+    document.getElementById("clock").style.display = "none";
+    document.getElementById("boxes").style.display = "none";
+    document.getElementById("box1").style.display = "none";
+    document.getElementById("box2").style.display = "none";
+    document.getElementById("box3").style.display = "none";
+    document.getElementById("header").classList.remove("tapHeader");
+    document.getElementById("header").classList.remove("waitHeader");
     document.body.classList.remove("tap");
     document.body.classList.remove("wait");
 }
-
