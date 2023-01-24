@@ -1,95 +1,81 @@
-body{
+body {
+    height: 100vh;
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
+    overflow: hidden;
+    background-color: #F9D423;
 }
-#headline{
+
+#headline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2%;
-    height: 20%;
-    width: 100%;
+    height: 10%;
+    padding: 0 2%;
+    background-color: #F5A623;
 }
-#backButton{
+
+#backButton {
     position: relative;
-    right: 30%;
-    height: 50px;
-    color: #717e9c;
     cursor: pointer;
+    color: #E4EBF5;
+    height: 50%;
+    right: 30%;
 }
-#oopLogo{
-    height: 100px;
+
+#oopLogo {
+    height: 100%;
 }
-#ageCalculator{
+
+#ageCalculator {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 50%;
-    height: 35%;
+    height: 55%;
+    margin: 10% 0;
 }
-#calculatorInput{
+
+#calculatorInput {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     flex-direction: column;
+    align-items: center;
     width: 80%;
     height: 80%;
-    background-color: #E4EBF5;
-    box-shadow: .3rem .3rem .6rem #c8d0e7, -.2rem -.2rem .5rem #FFFFFF;
     padding: 6%;
-    border-radius: 15px;
-    font-size: 180%;
-}
-#personAge{
-    height: 3%;
-    width: 80%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 2%;
     background-color: #E4EBF5;
     box-shadow: .3rem .3rem .6rem #c8d0e7, -.2rem -.2rem .5rem #FFFFFF;
-    padding: 5%;
-    margin: 2%;
     border-radius: 15px;
-    font-size: 180%;
-}
-#message{
-    height: 3%;
-    width: 80%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #E4EBF5;
-    box-shadow: .3rem .3rem .6rem #c8d0e7, -.2rem -.2rem .5rem #FFFFFF;
-    padding: 5%;
-    margin: 2%;
-    border-radius: 15px;
     font-size: 180%;
 }
-#fname{
+
+.form-element {
+    display: flex;
+    align-items: center;
+    width: 80%;
     margin: 2%;
     height: 70%;
-    width: 80%;
     font-size: 120%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-#fodselsar{
-    margin: 2%;
-    height: 70%;
-    width: 80%;
-    font-size: 120%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+#fname, #fodselsar {
+    border: none;
+    padding: 3%;
+    font-size: 2rem;
+    border-radius: 5px;
 }
-#submit{
+
+#submit {
     width: 60%;
     background-color: #E4EBF5;
     color: black;
@@ -102,6 +88,7 @@ body{
     border: none;
     cursor: pointer;
 }
+
 #submit:hover {
     box-shadow: inset .3rem .3rem .6rem #c8d0e7, inset -.2rem -.2rem .5rem #FFFFFF;
 }
@@ -110,32 +97,16 @@ body{
     box-shadow: inset .6rem .6rem .6rem #c8d0e7, inset -.5rem -.5rem .5rem #FFFFFF;
 }
 
-@media (max-width: 1100px){
-    #backButton{
-        right: 15%;
-    }
-    #ageCalculator{
-        width: 80%;
-        height: 80%;
-        margin-top: 10%;
-    }
-    #calculatorInput{
-        height: 10%;
-    }
-    #fname{
-        font-size: 90%;
-    }
-    #fodselsar{
-        font-size: 90%;
-    }
-    #submit{
-        font-size: 80%;
-    }
-    #personAge{
-        margin: 10%;
-        font-size: 90%;
-    }
-    #message{
-        font-size: 90%;
-    }
+#personAge, #message {
+    display: flex;
+    width: 80%;
+    height: 20%;
+    font-size: 2rem;
+    text-align: center;
+    justify-content: center;
+    background-color: #E4EBF5;
+    box-shadow: .3rem .3rem .6rem #c8d0e7, -.2rem -.2rem .5rem #FFFFFF;
+    border-radius: 10px;
+    margin: 2%;
+    padding: 1%;
 }
