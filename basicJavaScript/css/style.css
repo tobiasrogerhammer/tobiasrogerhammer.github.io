@@ -1,23 +1,36 @@
 body {
-    background-color: #E4EBF5;
+    background-color: #6699cc;
     justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
 }
 
+#headline{
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    background-color: #3473c7;
+    color: #fff;
+}
+
 #backButton {
     position: relative;
-    right: 45%;
-    height: 50px;
-    color: #717e9c;
+    right: 25%;
+    height: 60px;
     cursor: pointer;
 }
 
 h1 {
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #717e9c;
+    color: #fff;
     font-size: 200%;
 }
 
@@ -27,6 +40,7 @@ h1 {
     justify-content: center;
     align-items: center;
     width: 95%;
+    margin-top: 15%;
 }
 
 .collapsible {
@@ -45,9 +59,8 @@ h1 {
     height: 35%;
     justify-content: center;
     align-items: center;
-    box-shadow: .3rem .3rem .6rem #c8d0e7, -.2rem -.2rem .5rem #FFFFFF;
     transition: .1s ease-in-out;
-    color: #717e9c;
+    color: #000000;
     cursor: pointer;
 
 }
@@ -84,7 +97,6 @@ h1 {
     background-color: #E4EBF5;
     padding: 1%;
     border-radius: 10px;
-    box-shadow: .3rem .3rem .6rem #c8d0e7, -.2rem -.2rem .5rem #FFFFFF;
 }
 
 .languageJavascript {
@@ -233,6 +245,13 @@ pre {
 }
 
 @media (max-width: 768px) {
+
+    #backButton{
+        left: 2%;
+    }
+    #oppgaver{
+        margin-top: 25%;
+    }
     .collapsible {
         margin: 8%;
     }

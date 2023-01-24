@@ -9,7 +9,7 @@ html,
 body {
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    overflow: auto;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -44,7 +44,7 @@ body {
 }
 
 #quizLogo {
-    height: 60%;
+    height: 75%;
 }
 
 #reactionLogo {
@@ -97,10 +97,9 @@ body {
     align-items: center;
     font-family: var(--font-family);
     background-color: var(--primary-color);
-    width: 20%;
-    /* decreased width */
+    width: 25%;
     height: 20%;
-    /* decreased height */
+    padding: 1%;
     border-radius: 10px;
     font-size: 2rem;
     border: 0px;
@@ -130,18 +129,16 @@ body {
 }
 @media (max-width: 1100px){
     #gamemenu {
-        height: 100%;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
+        height: 60%;
+        justify-content: center;
     }
 
     .project {
         padding: 1%;
-        margin: 1%;
+        margin: 2%;
         font-size: 1.5rem;
-        width: 50%;
-        height: 5%;
+        width: 30%;
+        height: 15%;
     }
 }
 
@@ -182,7 +179,7 @@ body {
     }
 
     #oopLogo {
-        height: 70%;
+        height: 50%;
     }
 
 }
