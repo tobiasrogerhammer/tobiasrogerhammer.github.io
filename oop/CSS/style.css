@@ -110,3 +110,13 @@ body {
     margin: 2%;
     padding: 1%;
 }
+@media(max-width: 768px){
+
+    #ageCalculator {
+        width: 80%;
+    }
+
+    #personAge, #message {
+        font-size: 1.5rem;
+    }
+}
