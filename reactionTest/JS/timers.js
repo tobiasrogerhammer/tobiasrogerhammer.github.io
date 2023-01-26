@@ -1,8 +1,9 @@
 let x;
-let randomNum;
+let time;
 let countDown = false;
 let elapsedTime = 0;
 let rounds = 0;
+let startTime;
 
 function startGame() {
     document.getElementById("stopbutton").innerHTML = 'Wait for green!';
@@ -22,11 +23,11 @@ function startGame() {
 
     document.getElementById("stopbutton").disabled = true;
 
-    randomNum = 0;
+    time = 0;
     countDown = true;
     elapsedTime = 0;
 
-    randomNum = Math.floor(Math.random() * 300) + 1;
+    time = Math.floor(Math.random() * 300) + 1;
     x = setInterval(updateTimer, 10);
 
     rounds++
@@ -42,21 +43,28 @@ function startGame() {
     } else if (rounds === 1) {
         document.getElementById("bestScore").innerHTML = 'Tries:  1/5';
     }
+
+    startTime = performance.now();
+    setTimeout(updateTimer, time);
+
 }
 
 
 
 function updateTimer() {
+
+     elapsedTime = performance.now() - startTime;
+
     if (countDown) {
-        randomNum--;
-        if (randomNum === 0) {
+        time--;
+        if (time === 0) {
             countDown = false;
         }
     } else {
-        randomNum++;
+        time++;
     }
 
-    if (randomNum === 0) {
+    if (time === 0) {
         document.getElementById("stopbutton").innerHTML = 'Tap now!';
 
         document.body.classList.remove("wait");
@@ -77,11 +85,13 @@ function updateTimer() {
 
 
 let reactionTimes = {};
+let average;
+let highscore = 10000;
 
 function stopTimer() {
     if (rounds === 5) {
         document.getElementById("timer").innerHTML = 'Congratulations, round over!';
-        document.getElementById("bestScore").innerHTML = 'Best average:  ' + bestRound + ' ms';
+        document.getElementById("bestScore").innerHTML = 'Best average:  ' + highscore + '0 ms';
 
         document.getElementById("start").style.display = "none";
         document.getElementById("stopbutton").style.display = "none";
@@ -91,16 +101,16 @@ function stopTimer() {
         document.body.classList.remove("tap");
         document.getElementById("header").classList.remove("tapHeader");
 
-        if (average < bestRound) {
+        if (average < highscore) {
 
-            bestRound = average;
+            highscore = average;
 
-            document.getElementById("bestScore").innerHTML = 'Best average:  ' + bestRound + ' ms';
+            document.getElementById("bestScore").innerHTML = 'Best average:  ' + highscore + '0 ms';
             document.getElementById("timer").innerHTML = 'CONGRATULATIONS! NEW HIGH SCORE';
         }
 
     } else {
-        document.getElementById("timer").innerHTML = randomNum + 'ms reaction time';
+        document.getElementById("timer").innerHTML = time + '0ms reaction time';
 
         document.getElementById("stopbutton").style.display = "none";
         document.getElementById("start").style.display = "block";
@@ -115,14 +125,11 @@ function stopTimer() {
         let date = new Date();
         let dateString = date.toUTCString();
 
-        reactionTimes[dateString] = randomNum;
+        reactionTimes[dateString] = time;
         localStorage.setItem("reactionTimes", JSON.stringify(reactionTimes));
     }
 }
 
-
-let average;
-let bestRound = 10000;
 
 function setAverageReactionTime() {
 
@@ -132,7 +139,7 @@ function setAverageReactionTime() {
     average = sum / values.length;
     average = average.toFixed(0);
 
-    document.getElementById("average").innerHTML = 'Average:  ' + average + 'ms';
+    document.getElementById("average").innerHTML = 'Average:  ' + average + '0ms';
 }
 
 
@@ -142,14 +149,14 @@ function resetGame() {
     clearInterval(x); // stop the timer
     average;
     rounds = 0;
-    randomNum = 0;
+    time = 0;
     countDown = true;
     elapsedTime = 0;
     reactionTimes = [];
 
     document.getElementById("timer").innerHTML = '';
     document.getElementById("average").innerHTML = 'Average of 5:';
-    document.getElementById("bestScore").innerHTML = 'Best average:  ' + bestRound + 'ms';
+    document.getElementById("bestScore").innerHTML = 'Best average:  ' + highscore + '0ms';
 
     document.getElementById("start").style.display = "block";
     document.getElementById("explanation").style.display = "block";

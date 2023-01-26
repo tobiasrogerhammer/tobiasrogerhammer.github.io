@@ -172,7 +172,8 @@ body {
 
 #timer {
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
+    font-weight: 800;
     color: var(--font-color);
     margin: 1rem;
 }
