@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Apple Calculator</title>
+  <style>
+    .calculator {
+      width: 400px;
+      height: 500px;
+      background-color: #EEEEEE;
+      padding: 20px;
+    }
+    .calculator button {
+      width: 70px;
+      height: 70px;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .output {
+      background-color: white;
+      height: 70px;
+      font-size: 36px;
+      text-align: right;
+      padding-right: 20px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <div class="output">0</div>
+    <button class="number">1</button>
+    <button class="number">2</button>
+    <button class="number">3</button>
+    <button class="operator">+</button>
+    <br>
+    <button class="number">4</button>
+    <button class="number">5</button>
+    <button class="number">6</button>
+    <button class="operator">-</button>
+    <br>
+    <button class="number">7</button>
+    <button class="number">8</button>
+    <button class="number">9</button>
+    <button class="operator">*</button>
+    <br>
+    <button class="number">0</button>
+    <button class="operator">/</button>
+    <button class="operator">C</button>
+    <button class="operator">=</button>
+  </div>
+
+  <script>
+    const output = document.querySelector(".output");
+    const buttons = document.querySelectorAll("button");
+
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        const buttonValue = button.innerHTML;
+        if (buttonValue === "=") {
+          output.innerHTML = eval(output.innerHTML);
+        } else if (buttonValue === "C") {
+          output.innerHTML = 0;
+        } else {
+          output.innerHTML += buttonValue;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
