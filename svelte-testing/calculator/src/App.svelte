@@ -1,4 +1,7 @@
 <script>
+
+import './CSS/style.css'
+
 	let firstInput = null;
 	let operator = null;
 	let secondInput = null;
@@ -172,99 +175,4 @@
 	</div>
 </div>
 
-<style>
-	#body {
-		position: absolute;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background-color: #6699cc;
-	}
-	#headline {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 10%;
-		padding: 0 2%;
-		background-color: #3473c7;
-		color: #fff;
-		font-weight: 700;
-		font-size: 200%;
-		font-family: Open Sans Bold;
-	}
 
-	#history-list {
-		position: relative;
-		right: 30%;
-		cursor: pointer;
-		background-color: #333;
-		color: #f4f4f4;
-		border-radius: 10px;
-	}
-
-	#output {
-		width: 55%;
-		height: 10%;
-		font-size: 300%;
-		padding: 1%;
-		color: #f4f4f4;
-		text-align: right;
-		border-radius: 10px;
-	}
-	#calculator {
-		position: fixed;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		height: 70%;
-		width: 30%;
-		background-color: #333;
-		border-radius: 50px;
-	}
-	#backButton {
-		position: relative;
-		right: 25%;
-		height: 30%;
-		cursor: pointer;
-	}
-	#wide {
-		width: 160px;
-	}
-	.row button {
-		height: 75px;
-		width: 75px;
-		border-radius: 100px;
-		font-size: 200%;
-		background-color: #555;
-		color: white;
-		border: none;
-		cursor: pointer;
-	}
-	.topTools {
-		background-color: grey !important;
-	}
-	.tool {
-		background-color: #ff9500 !important;
-	}
-	@media only screen and (max-width: 600px) {
-		.row button {
-			width: 40px;
-			height: 40px;
-			border-radius: 100px;
-			font-size: 18px;
-		}
-		h1 {
-			font-size: 100%;
-		}
-	}
-</style>
