@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import './App.css';
 
 function ChatApp() {
@@ -9,11 +9,11 @@ function ChatApp() {
     setInputValue(event.target.value);
   };
 
-  const handleSubmit = event => {
+  const handleSubmit = useCallback(event => {
     event.preventDefault();
-    setMessages([...messages, inputValue]);
+    setMessages(prevMessages => prevMessages.concat([inputValue]));
     setInputValue('');
-  };
+  }, [inputValue]);
 
   return (
     <div className="chat-app">
@@ -27,7 +27,7 @@ function ChatApp() {
       </div>
       <div className="chat-footer">
         <form className="input-container" onSubmit={handleSubmit}>
-          <input type="text" value={inputValue} onChange={handleInput} />
+          <input type="text" value={inputValue} onChange={handleInput} maxLength="500"/>
           <button type="submit">Send</button>
         </form>
       </div>
