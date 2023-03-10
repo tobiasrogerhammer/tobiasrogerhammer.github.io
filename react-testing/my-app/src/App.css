@@ -1,142 +1,135 @@
+/* Colors */
 :root {
-  --primary-color: #6699cc;
-  --secondary-color: #F8F8F8;
-  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --tertiary-color: #c8d0e7;
+  --primary-color: #FB6F92;
+  --secondary-color: #FFB3C6;
+  --tertiary-color: #FFEBF0;
+  --text-color: #333333;
+  --background-color: #F8F8F8;
 }
 
-html,
-body {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
+/* Chat App container */
+.chat-app {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+}
+
+.chats ul,
+.members ul {
+  list-style-type: none;
+  padding: 0;
   margin: 0;
+}
+
+.chats li,
+.members li {
+  margin-bottom: 10px;
+}
+
+.chats button,
+.members button {
+  border: none;
+  background-color: transparent;
+  color: var(--text-color);
+  font-size: 16px;
+  padding: 10px 0;
+  width: 100%;
+  text-align: left;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.chats button:hover,
+.members button:hover {
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.chats button.active {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* Chat Main */
+.chat-main {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: var(--primary-color);
-  font-family: var(--font-family);
-  color: var(--secondary-color);
+  background-color: var(--background-color);
 }
 
 .chat-header {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
   display: flex;
-  position: fixed;
-  width: 100%;
-  height: 10%;
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-weight: 700;
-  font-size: 2rem;
-  background-color: #3473c7;
-}
-
-.chat-header h1 {
-  font-size: 2rem;
-  margin: 0;
 }
 
 .chat-body {
-  width: 100%;
-  height: 70%;
-  overflow: scroll;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 1rem;
-}
-
-
-.message-container {
-  margin-top: 5%;
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 0.5rem;
-  }
-
-.message-container.sent {
-  justify-content: flex-end;
-}
-
-.message {
+  flex: 1;
+  padding: 20px;
   background-color: var(--tertiary-color);
-  padding: 1rem;
-  border-radius: 1rem;
-  max-width: 60%;
-  word-break: break-word;
-  box-shadow: -.3rem .3rem .1rem #7d7c7c;
+  overflow-y: scroll;
 }
 
+.chat-body::-webkit-scrollbar {
+  width: 8px;
+}
 
-.message.sent {
-  background-color: #fff;
-  color: #000;
+.chat-body::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 4px;
 }
 
 .chat-footer {
-  position: fixed;
-  width: 100%;
-  height: 20%;
-  top: 86%;
+  padding: 20px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
+  justify-content: space-between;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
 }
-
 
 .input-container {
-  display: flex;
-  width: 100%;
-  height: 25%;
-  padding: 1rem;
-  background-color: #3473c7;
+  flex: 1;
+  margin-right: 10px;
 }
 
-.input-container input[type="text"] {
-  width: 100%;
-  height: 100%;
-  padding: .5rem;
+input[type="text"] {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  color: var(--text-color);
+  background-color: #fff;
+}
+
+button[type="submit"] {
   border: none;
-  border-radius: 1rem;
-  background-color: var(--tertiary-color);
-  color: #000;
-}
-
-.input-container button[type="submit"] {
-  width: 10%;
-  height: 100%;
-  border-radius: 1rem;
-  background-color: #3473c7;
+  background-color: var(--primary-color);
   color: #fff;
-  font-weight: 700;
-  font-size: 2rem;
-  margin-left: 2%;
-  border: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 4px;
   cursor: pointer;
-  }
-  
-  .input-container button[type="submit"]:hover {
-  background-color: #2464b2;
-  }
-  
-  .input-container input[type="text"] {
-  width: 50%;
-  height: 60%;
-  border-radius: 1rem;
-  border: none;
-  padding: 0.5rem;
-  font-size: 1.2rem;
-  outline: none;
-  }
-  
-  .input-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  }
+  transition: background-color 0.2s ease-in-out;
+  margin-left: 2%;
+}
+
+button[type="submit"]:hover {
+  background-color: #f95a78;
+}
