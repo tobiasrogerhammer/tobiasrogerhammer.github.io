@@ -10,7 +10,7 @@ import '@fontsource/roboto/700.css';
 function getContent(){
   console.log('run')
   const content = async () => {
-    const res = await axios.get("http://localhost:5000", {withCredentials: true})
+    const res = await axios.get("http://localhost:5000", {withCredentials: false})
     console.log(res)
   }
   content();

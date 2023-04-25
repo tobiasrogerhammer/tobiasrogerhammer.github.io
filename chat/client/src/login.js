@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './login.css';
+import { Link } from 'react-router-dom';
 
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -92,7 +93,7 @@ function Login({ onLogin }) {
           <br />
         </div>
         <br />
-        <button type="submit">Log In</button>
+        <button type="submit">  <Link to="/loggedin"> Log In </Link></button>
       </form>
     </div>
   );

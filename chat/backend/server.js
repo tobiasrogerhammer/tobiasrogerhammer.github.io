@@ -11,11 +11,13 @@ const port = 5000;
 mongoose.set("strictQuery", false);
 mongoose.connect(db, {});
 
-const message = new mongoose.Schema({
-	user: String,
-	message: String,
-	time: Number,
-});
+mongoose.connect("mongodb+srv://tobias:3EZkUJgct3QLHau@cluster0.v5e8lmx.mongodb.net/test", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    dbName: "Chatapp"
+    })
+    .then(console.log("Connectet to mongoDB"))
+    .catch((err) => console.log(err));
 
 const user = new mongoose.Schema({
 	mail: String,
@@ -23,7 +25,7 @@ const user = new mongoose.Schema({
 	password: String,
 	isAdmin: Boolean,
 });
-const User = mongoose.model("User", user);
+const userSchema = mongoose.model("User", user);
 
 app.use(express.json());
 
@@ -40,6 +42,25 @@ const corsOptions = {
 	// credentials: true,
 };
 app.use(cors(corsOptions));
+
+app.post("/chats", (req, res) => {
+	console.log(req.body);
+	const chats = new Chat({
+		user: req.body.username,
+		chat: req.body.newMessage,
+	});
+
+	newChat
+		.save()
+		.then((savedData) => {
+			console.log("Saved data:", savedData);
+			res.send("Data received and saved successfully");
+		})
+		.catch((err) => {
+			console.error(err);
+			res.status(500).send("Error saving data");
+		});
+});
 
 app.use("/get", getcontent)
 
