@@ -1,5 +1,5 @@
 /* Chat app styling */
-.chat-app {
+.chatApp {
   position: fixed;
   display: flex;
   flex-direction: row;
@@ -21,7 +21,7 @@
   margin-bottom: 24px;
 }
 
-.chat-header {
+.chatHeader {
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 8px;
@@ -62,7 +62,7 @@ li button.active {
 }
 
 /* Chat main styling */
-.chat-main {
+.chatMain {
   margin-left: 16%;
   position: fixed;
   width: 83%;
@@ -76,13 +76,13 @@ li button.active {
   min-width: 250px;
 }
 
-.chat-header {
+.chatHeader {
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 8px;
 }
 
-.chat-body {
+.chatBody {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -90,11 +90,11 @@ li button.active {
   overflow-y: scroll;
 }
 
-.chat-footer {
+.chatFooter {
   margin-top: 24px;
 }
 
-.input-container {
+.inputContainer {
   display: flex;
   flex-direction: row;
   align-items: center;

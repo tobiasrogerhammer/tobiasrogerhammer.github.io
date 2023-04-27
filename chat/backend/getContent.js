@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const Message = require("./message");
+const User = require("./user");
 
 router.post('/create', async (req, res) => {
     try{

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import './login.css';
+import styles from '../login.module.css';
 import { Link } from 'react-router-dom';
+import axios from "axios";
 
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -12,6 +13,7 @@ function Login({ onLogin }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [selectedChats, setSelectedChats] = useState([]);
+  const [error, setError] = useState('');
 
   const handleUsernameChange = (event) => setUsername(event.target.value);
   const handleEmailChange = (event) => setEmail(event.target.value);
@@ -29,20 +31,26 @@ function Login({ onLogin }) {
     }
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    const user = {
-      username,
-      email,
-      password,
-      selectedChats,
-    };
-    onLogin(user);
+    try {
+      const response = await axios.post("http://localhost:5000/user/create", {
+        username: username,
+        mailadress: email,
+        password: password,
+        selectedChats: selectedChats
+      }, {withCredentials: true});
+      console.log(response); // assume the server returns a JWT token
+    } catch (error) {
+      console.log('heipådeg')
+    
+    }
   };
 
   return (
-    <div className="login">
+    <div className={styles.login}>
       <h2>Log In</h2>
+      {error && <p>{error}</p>}
       <form onSubmit={handleSubmit}>
         <label>
           Username:
@@ -89,14 +97,17 @@ function Login({ onLogin }) {
               checked={selectedChats.includes('chat3')}
             />
             Chat 3
-          </label>
-          <br />
-        </div>
-        <br />
-        <button type="submit">  <Link to="/loggedin"> Log In </Link></button>
-      </form>
+            </label>
+      <br />
     </div>
-  );
+
+    <Link to="/chat"> <button type="submit">Log In</button></Link>
+  </form>
+  <p>
+    Don't have an account? <Link to="/signup">Sign up</Link>
+  </p>
+</div>
+);
 }
 
 export default Login;
