@@ -3,20 +3,6 @@ import styles from '../chat.module.css';
 import axios from 'axios';
 
 
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
-
-function getContent(){
-  console.log('run')
-  const content = async () => {
-    const res = await axios.get("http://localhost:5000", {withCredentials: false})
-    console.log(res)
-  }
-  content();
-}
-
 function ChatApp() {
   const [inputValue, setInputValue] = useState('');
   const [chats, setChats] = useState({
@@ -40,16 +26,24 @@ function ChatApp() {
   const [members] = useState(['member1', 'member2', 'member3']);
   const [availableChats] = useState(['chat1', 'chat2', 'chat3']);
 
-  const handleInput = useCallback(event => {
-    setInputValue(event.target.value);
+  const handleInput = useCallback((event) => {
+    setInputValue(event.currentTarget.value);
   }, []);
 
-  const handleSubmit = useCallback(event => {
+  const handleSubmit = useCallback((event) => {
     event.preventDefault();
-    setChats(prevChats => {
+    if (!inputValue.trim()) {
+      return;
+    }
+
+
+    setChats((prevChats) => {
       const chatId = currentChat;
       const memberId = 'member1'; // TODO: Change to the ID of the currently logged-in user
-      const newMessage = inputValue;
+      const newMessage = {
+        text: inputValue,
+        timestamp: new Date().toISOString(),
+      };
       const updatedChat = {
         ...prevChats[chatId],
         [memberId]: [...prevChats[chatId][memberId], newMessage],
@@ -62,8 +56,8 @@ function ChatApp() {
     setInputValue('');
   }, [currentChat, inputValue]);
 
-  const handleChatChange = useCallback(event => {
-    setCurrentChat(event.target.value);
+  const handleChatChange = useCallback((event) => {
+    setCurrentChat(event.currentTarget.value);
   }, []);
 
   const currentChatMembers = chats[currentChat] || {};
@@ -92,7 +86,7 @@ function ChatApp() {
             ))}
           </ul>
         </div>
-
+  
         <div className={styles.members}>
           <div className={styles.chatHeader}>Members</div>
           <ul>
@@ -106,7 +100,7 @@ function ChatApp() {
         <div className={styles.chatHeader}>{currentChat}</div>
         <div className={styles.chatBody}>
           {currentChatMembers[members[0]]?.map((message, index) => (
-            <ChatMessage key={index} message={message} />
+            <ChatMessage key={index} message={message.text} timestamp={message.timestamp} />
           ))}
         </div>
         <div className={styles.chatFooter}>
@@ -117,20 +111,24 @@ function ChatApp() {
               onChange={handleInput}
               maxLength="500"
             />
-            <button className={styles.inputContainer}type="submit" onClick={getContent}>Send</button>
+            <button className={styles.sendButton} type="submit">Send</button>
           </form>
         </div>
       </div>
     </div>
   );
+  
 }
 
-function ChatMessage({ message }) {
+function ChatMessage({ message, timestamp }) {
+  const formattedTimestamp = new Date(timestamp).toLocaleString();
   return (
     <div className={styles.messageContainer}>
       <div className={styles.messageSent}>{message}</div>
+      <div className={styles.timestamp}>{formattedTimestamp}</div>
     </div>
   );
 }
+
 
 export default ChatApp;

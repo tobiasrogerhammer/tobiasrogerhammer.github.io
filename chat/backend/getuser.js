@@ -1,10 +1,7 @@
 const router = require("express").Router();
 const Username = require("./user");
 
-
-
 router.post('/create', async (req, res) => {
-    console.log(req.body)
     try{
         const newUsername = new Username({
             username: req.body.username,

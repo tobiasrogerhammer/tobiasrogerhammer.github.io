@@ -20,6 +20,9 @@
 .chats {
   margin-bottom: 24px;
 }
+.timestamp{
+  font-size: 12px;
+}
 
 .chatHeader {
   font-size: 18px;
@@ -88,6 +91,7 @@ li button.active {
   flex-grow: 1;
   padding: 8px 16px;
   overflow-y: scroll;
+  font-size: 20px;
 }
 
 .chatFooter {

@@ -1,9 +1,19 @@
 const mongoose = require("mongoose");
 
-const message = new mongoose.Schema({
-	user: String,
-	message: String,
-	time: Number,
+const Message = new mongoose.Schema({
+
+	message: {
+		type: String,
+		required: true,
+	},
+	username: {
+		type: String,
+		required: true,
+	},
+	time: {
+		type: Date,
+		required: true,
+	}
 });
-module.exports = mongoose.model("message", message);
+module.exports = mongoose.model("Message", Message);
 

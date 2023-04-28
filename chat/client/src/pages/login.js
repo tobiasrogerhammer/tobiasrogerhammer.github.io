@@ -3,11 +3,6 @@ import styles from '../login.module.css';
 import { Link } from 'react-router-dom';
 import axios from "axios";
 
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
-
 function Login({ onLogin }) {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -101,11 +96,8 @@ function Login({ onLogin }) {
       <br />
     </div>
 
-    <Link to="/chat"> <button type="submit">Log In</button></Link>
+    <Link to="/chat"> <button type="submit">Sign up</button></Link>
   </form>
-  <p>
-    Don't have an account? <Link to="/signup">Sign up</Link>
-  </p>
 </div>
 );
 }
