@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from '../login.module.css';
-import { Link } from 'react-router-dom';
 import axios from "axios";
+import bcrypt from 'bcryptjs';
 
 function Login({ onLogin }) {
   const [username, setUsername] = useState('');
@@ -26,18 +26,25 @@ function Login({ onLogin }) {
     }
   };
 
+  const saltRounds = 10; // the number of rounds used for salting
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
+      const salt = await bcrypt.genSalt(saltRounds); // generate a unique salt
+      const hashedPassword = await bcrypt.hash(password, salt); // hash the password with the salt
       const response = await axios.post("http://localhost:5000/user/create", {
         username: username,
         mailadress: email,
-        password: password,
+        password: hashedPassword,
         selectedChats: selectedChats
       }, {withCredentials: true});
-      console.log(response); // assume the server returns a JWT token
+      console.log(response);
+      if(response.status = 200){
+        window.location.href = "/chat";
+      }
     } catch (error) {
-      console.log('heipådeg')
+      console.log('dette er en feil')
     
     }
   };
@@ -95,8 +102,7 @@ function Login({ onLogin }) {
             </label>
       <br />
     </div>
-
-    <Link to="/chat"> <button type="submit">Sign up</button></Link>
+    <button type="submit">Sign up</button>
   </form>
 </div>
 );
