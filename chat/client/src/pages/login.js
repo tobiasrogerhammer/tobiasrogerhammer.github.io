@@ -40,6 +40,9 @@ function Login({ onLogin }) {
         selectedChats: selectedChats
       }, {withCredentials: true});
       console.log(response);
+      if (response.data.exists) {
+        setError('Username or email already taken');
+      }
       if(response.status = 200){
         window.location.href = "/chat";
       }
